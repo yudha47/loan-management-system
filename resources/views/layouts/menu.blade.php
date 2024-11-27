@@ -39,7 +39,16 @@
                  data-accordion="false">
                  <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-                 <li class="nav-item menu-open">
+                      
+                  <li class="nav-item menu-open">
+                    <a href="{{route('cheque.index')}}"
+                        class="nav-link {{ request()->routeIs('cheque.create') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-dollar-sign"></i>
+                        <p>Cheques</p>
+                    </a>
+                </li>
+               
+                 <li class="nav-item">
                      <a href="#" class="nav-link {{ request()->routeIs('borrower.*') ? 'active' : '' }}">
                          <i class="nav-icon fas fa-building"></i>
                          <p>

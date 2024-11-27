@@ -132,7 +132,7 @@ class BorrowersController extends Controller
 
 
 
-            $findBorrower = Borrowers::findOrFail($borrower);
+            $findBorrower = Borrower::findOrFail($borrower);
             $findBorrower->update($request->except('files'));
 
             if ($request->hasFile('files')) {
